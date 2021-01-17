@@ -1,15 +1,15 @@
 ![Run Python Tests](https://github.com/Pythonen/wolt_summer2021/workflows/Run%20Python%20Tests/badge.svg)
 
 # Wolt summer 2021 pre-assignment
----
+
 **Wolt** once again had this pre-assignment for internship positions.
 This is my take on the task that is given [here](https://github.com/woltapp/summer2021-internship).
 
-### My assignment
+## My assignment
 
 One of the requirements were that the task must be done with one of the following languages: *Typescript*, *ReasonML*, *Python*, *Scala*, *Kotlin* or *Java* and hence I used Python and [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
-### Running it locally
+## Running it locally
 To get the assignment running on your machine, you have to have Python 3.7 =< and pip installed to your machine.
 
 On your command line type
