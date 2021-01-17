@@ -3,14 +3,6 @@ import datetime
 from dateutil import relativedelta
 
 
-def new_restaurants(restaurants: list) -> list:
-    temp = sorted(
-        restaurants, key=lambda r: (r['online'], r['launch_date']), reverse=True)
-    newest_restaurants = list(filter(
-        lambda r: is_older_than_4mo(r['launch_date']) == False, temp))
-    return newest_restaurants[:10]
-
-
 def is_older_than_4mo(date: str) -> bool:
     """Checks whether the given date is older than 4 months or not.
 
@@ -27,25 +19,6 @@ def is_older_than_4mo(date: str) -> bool:
     if(abs(r.months) > 4):
         return True
     return False
-
-
-def popular_restaurants(restaurants: list) -> list:
-    popular_restaurantes = sorted(
-        restaurants, key=lambda r: (r['online'], r['popularity']), reverse=True)
-    return popular_restaurantes[:10]
-
-
-def nearby_restaurants(restaurants: list) -> list:
-    """Nearby restaurants from restaurants.json. Emphasis on wheter the restaurant is open or not. 
-
-    Args:
-        restaurants (list): List of restaurants that are at most 1.5km away.
-
-    Returns:
-        list: Sorted list of restaurants
-    """
-    restaurantes = sorted(restaurants, key=lambda r: r['online'], reverse=True)
-    return restaurantes[:10]
 
 
 def getDistanceFromLatLonInKm(lat1: float, lon1: float, lat2: float, lon2: float) -> float:

@@ -19,6 +19,12 @@ class TestUtilityMethods(unittest.TestCase):
             62.242561, 25.747499, 62.242350, 25.726155)
         self.assertEqual(int(result), 1)
 
+    def test_is_4months_not(self):
+        self.assertEqual(utils.is_older_than_4mo('2021-01-01'), False)
+
+    def test_is_4months_is(self):
+        self.assertEqual(utils.is_older_than_4mo('2020-02-02'), True)
+
 
 if __name__ == '__main__':
     unittest.main()
