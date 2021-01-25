@@ -13,18 +13,27 @@ One of the requirements were that the task must be done with one of the followin
 To get the assignment running on your machine, you have to have Python 3.7 =< and pip installed to your machine.
 
 On your command line type
+
 `pip install -r requirements.txt`
+
 or if you're on mac
+
 `pip3 install -r requirements.txt`
 
 To run the api, in the root folder depending on your machine type:
+
 `python main.py`
+
 or
+
 `python3 main.py`
 
 To run tests in the root folder depending on your machine type:
+
 `python utils_test.py`
+
 or
+
 `python3 util_test.py`
 
 The 'API' responds from `/discovery` and it responds with all the restaurants from [restaurants.json](https://raw.githubusercontent.com/woltapp/summer2021-internship/main/restaurants.json) if not given any query parameters.
